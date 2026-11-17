@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Damien Tuyizere favicon">
+  <defs>
+    <linearGradient id="bg" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#6d7bff"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="#07111f"/>
+  <rect x="6" y="6" width="52" height="52" rx="12" fill="url(#bg)" opacity="0.18"/>
+  <path d="M18 45V20h8.5c8.2 0 13.2 4.6 13.2 12.5S34.7 45 26.5 45H18zm8.1-7.8h1.2c4.7 0 7.3-2.4 7.3-6.7s-2.6-6.5-7.3-6.5h-1.2v13.2z" fill="#f8fafc"/>
+  <path d="M39 45V20h7.4v25H39zm0-29.5h7.4v7.2H39v-7.2z" fill="#dbeafe"/>
+</svg>
