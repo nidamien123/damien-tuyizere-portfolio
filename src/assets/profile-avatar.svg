@@ -1,0 +1,18 @@
+<svg width="640" height="640" viewBox="0 0 640 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="a" x1="50" y1="30" x2="590" y2="590" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6D7BFF"/>
+      <stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <linearGradient id="b" x1="90" y1="120" x2="510" y2="500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E0F2FE"/>
+      <stop offset="1" stop-color="#C7D2FE"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="640" rx="80" fill="#07111F"/>
+  <circle cx="520" cy="120" r="110" fill="url(#a)" opacity="0.2"/>
+  <circle cx="160" cy="500" r="150" fill="url(#a)" opacity="0.18"/>
+  <rect x="86" y="98" width="468" height="444" rx="44" fill="url(#a)" opacity="0.15"/>
+  <path d="M220 430V206H288.5C353.15 206 389.5 242.25 389.5 303.5C389.5 364.97 353.15 400.5 288.5 400.5H220V430ZM288.5 368.5C327.35 368.5 349.3 347.35 349.3 303.5C349.3 259.65 327.35 238.5 288.5 238.5H257.4V368.5H288.5Z" fill="url(#b)"/>
+  <path d="M426 430V206H464.75V430H426ZM426 174.4H464.75V208.5H426V174.4Z" fill="#E2E8F0" opacity="0.9"/>
+</svg>
