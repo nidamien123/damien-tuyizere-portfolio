@@ -1,85 +1,60 @@
 # Damien Tuyizere Portfolio
 
-A modern, premium portfolio website for Damien Tuyizere built with React, Vite, JavaScript, Tailwind CSS, and Lucide icons.
+A responsive personal portfolio built with React, Vite, Tailwind CSS, and Lucide icons.
 
-## Features
-- Responsive portfolio layout
-- Dark/light theme toggle
-- Animated sections and smooth scrolling
-- Project filtering and portfolio cards
-- Contact form with validation
-- EmailJS-ready configuration
-- Download CV button
-- SEO-ready metadata
-- Custom favicon and 404 page
-- Production-ready Vite setup
+## Run locally
 
-## Tech Stack
-- React.js
-- Vite
-- JavaScript ES6+
-- Tailwind CSS
-- Lucide React
-- EmailJS
+Requires Node.js 18 or newer.
 
-## Getting Started
-
-### 1. Install dependencies
 ```bash
 npm install
-```
-
-### 2. Start the app in development mode
-```bash
 npm run dev
 ```
 
-### 3. Build for production
-```bash
-npm run build
+Create `.env.local` from `.env.example` to configure the optional contact form. The site works without EmailJS credentials; the form shows a setup message until they are added.
+
+```env
+VITE_EMAILJS_SERVICE_ID=your_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_template_id
+VITE_EMAILJS_PUBLIC_KEY=your_public_key
 ```
 
-### 4. Preview production build
+In EmailJS, configure a template with `from_name`, `from_email`, `subject`, and `message` variables. For Vercel, add the same `VITE_EMAILJS_*` values under Project Settings → Environment Variables, then redeploy.
+
+## Personalize the content
+
+Edit `src/data/portfolioData.js` to update the biography, skills, projects, services, education, and social links. Known public GitHub project links are included; add live demo URLs only when deployed. Replace `src/assets/profile-avatar.svg` with your own image and update its imports in `src/App.jsx` as needed. Replace `public/cv.pdf` with your real CV before publishing—the included PDF is clearly marked as a placeholder.
+
+Education dates, email, phone number, work history, live demos, and unverified profile links have intentionally not been invented.
+
+## Production build
+
 ```bash
+npm run build
 npm run preview
 ```
 
-## EmailJS Setup
-1. Create a free EmailJS account.
-2. Create an email service and template.
-3. Copy your credentials into `.env.local` based on `.env.example`.
-4. Update the EmailJS configuration in `src/components/ContactForm.jsx` if needed.
+## Publish to GitHub
 
-Example:
-```env
-EMAILJS_SERVICE_ID=your_service_id
-EMAILJS_TEMPLATE_ID=your_template_id
-EMAILJS_PUBLIC_KEY=your_public_key
-```
+Create a repository on GitHub, then push the project:
 
-## GitHub Publication
-1. Initialize git if needed:
 ```bash
 git init
 git add .
-git commit -m "Initial portfolio commit"
-```
-2. Create a GitHub repository named `damien-tuyizere-portfolio`.
-3. Push it to GitHub:
-```bash
+git commit -m "Build personal portfolio"
 git branch -M main
-git remote add origin https://github.com/<your-username>/damien-tuyizere-portfolio.git
+git remote add origin https://github.com/<your-username>/<repository-name>.git
 git push -u origin main
 ```
 
-## Vercel Deployment
-1. Push the project to GitHub.
-2. Open https://vercel.com and import the repository.
-3. Use the default Vercel settings.
-4. Deploy.
-5. Set the project root to the repository root.
+## Deploy on Vercel
 
-## Project Structure
+1. Import the GitHub repository at [vercel.com/new](https://vercel.com/new).
+2. Keep the project root at the repository root and use the detected Vite settings (`npm run build`, output directory `dist`).
+3. Add EmailJS environment variables if using the contact form, then deploy.
+
+## Project structure
+
 ```text
 src/
   assets/
@@ -89,11 +64,6 @@ src/
   main.jsx
   index.css
 public/
-  favicon.svg
   cv.pdf
+  favicon.svg
 ```
-
-## Notes
-- Replace placeholder profile data, education, project links, and contact details in `src/data/portfolioData.js`.
-- Update `public/cv.pdf` with your real CV file for download.
-- You can replace the placeholder profile art in `src/assets/profile-avatar.svg` with your own photo later.
